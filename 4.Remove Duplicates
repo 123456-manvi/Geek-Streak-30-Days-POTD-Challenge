@@ -1,0 +1,17 @@
+class Solution {
+  public:
+
+    string removeDups(string str) {
+        // Your code goes here
+        
+        unordered_set<char> seen;
+        string res;
+        for(char ch:str){
+            if(seen.find(ch)==seen.end()){
+                seen.insert(ch);
+                res+=ch;
+            }
+        }
+        return res;
+    }
+};
